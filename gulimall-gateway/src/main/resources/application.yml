@@ -1,0 +1,11 @@
+server:
+  port: 7000
+
+spring:
+  application:
+    name: gulimall-gateway-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.116.129:8848
+        namespace: ebba4904-34b3-46e2-886e-63c204a1c91c

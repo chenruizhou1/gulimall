@@ -1,17 +1,16 @@
 package com.gulimall;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
-@MapperScan("com.gulimall.dao")
-@SpringBootApplication
-public class CouponMain {
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+public class GatewayMain {
 
     public static void main(String[] args) {
-        SpringApplication.run(CouponMain.class, args);
+        SpringApplication.run(GatewayMain.class, args);
     }
 
 }
